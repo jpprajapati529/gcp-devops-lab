@@ -8,7 +8,7 @@ steps:
         echo "commit id: $SHORT_SHA"
         echo "custom variable: $_WELCOME_MSG"
 
-Substitutions:
+substitutions:
   _WELCOME_MSG: "Welcome to the project"
 options:
   logging: CLOUD_LOGGING_ONLY
