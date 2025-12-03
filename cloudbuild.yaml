@@ -1,5 +1,14 @@
 steps:
   - name: 'ubuntu'
-    args: ['echo' , 'hello world']
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        echo "Bulding project for: $PROJECT_ID"
+        echo "commit id: $SHORT_SHA"
+        echo "custom variable: $_WELCOME_MSG"
+
+Substitutions:
+  _WELCOME_MSG: "Welcome to the project"
 options:
   logging: CLOUD_LOGGING_ONLY
